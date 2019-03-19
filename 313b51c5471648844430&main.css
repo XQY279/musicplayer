@@ -1,0 +1,200 @@
+@charset "UTF-8";
+body, p, h1, h2, h3, h4, h5, h6, ul, li, a {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none; }
+
+html {
+  height: 100%;
+  width: 100%; }
+  html body {
+    background-image: url(src/image/178.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom; }
+
+.wrapper {
+  width: 600px;
+  margin: 50px auto 0px;
+  position: relative; }
+  .wrapper .main {
+    width: 100%;
+    text-align: center; }
+    .wrapper .main img {
+      width: 350px;
+      height: 350px;
+      border: 10px solid rgba(135, 207, 235, 0.5);
+      border-radius: 50%;
+      opacity: 0.8;
+      transition: 0.3s;
+      cursor: pointer;
+      animation: rotation 4s linear infinite paused; }
+    .wrapper .main img:hover {
+      width: 356px;
+      height: 356px;
+      border: 7px solid rgba(135, 207, 235, 0.5);
+      transition: 0.2s; }
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.tool {
+  position: relative;
+  margin-top: 80px;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(135, 207, 235, 0.5);
+  border-radius: 20px; }
+  .tool .btn {
+    position: absolute;
+    left: 30px;
+    width: 110px;
+    height: 30px;
+    cursor: pointer; }
+    .tool .btn .prew {
+      width: 30px;
+      height: 30px;
+      float: left; }
+    .tool .btn .btnb {
+      width: 30px;
+      height: 30px;
+      float: left;
+      margin-left: 10px; }
+    .tool .btn .next {
+      width: 30px;
+      height: 30px;
+      float: left;
+      margin-left: 10px; }
+  .tool > div {
+    top: 50%;
+    margin-top: -15px; }
+  .tool .progress {
+    position: absolute;
+    right: 60px;
+    width: 400px;
+    height: 30px; }
+    .tool .progress .current-time, .tool .progress .all-time {
+      width: 80px;
+      height: 30px;
+      text-align: center;
+      color: white;
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 200; }
+    .tool .progress .current-time {
+      float: left;
+      user-select: none; }
+    .tool .progress .all-time {
+      float: right;
+      user-select: none; }
+    .tool .progress .pro-box {
+      position: relative;
+      display: inline-block;
+      width: 240px;
+      height: 30px; }
+      .tool .progress .pro-box .pro-bg {
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+        width: 100%;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 0.3); }
+      .tool .progress .pro-box .pro-active {
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+        height: 2px;
+        width: 0px;
+        background-color: white; }
+        .tool .progress .pro-box .pro-active .radio-box {
+          position: absolute;
+          right: -9px;
+          top: -9px;
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+          /*鼠标滑过变成手*/ }
+          .tool .progress .pro-box .pro-active .radio-box .radio {
+            position: absolute;
+            top: 50%;
+            margin-top: -4px;
+            left: 50%;
+            margin-left: -4px;
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: white; }
+  .tool .volume {
+    position: absolute;
+    right: 30px;
+    width: 40px;
+    height: 150px;
+    top: -80px; }
+    .tool .volume .volus {
+      width: 40px;
+      height: 100px;
+      background-color: rgba(255, 105, 180, 0.548);
+      border-radius: 8px;
+      display: none; }
+      .tool .volume .volus .vol-box {
+        position: absolute;
+        top: 10px;
+        height: 80px;
+        width: 40px; }
+        .tool .volume .volus .vol-box .vol-bg {
+          height: 80px;
+          width: 2px;
+          margin-left: 19px;
+          background: rgba(255, 255, 255, 0.3); }
+        .tool .volume .volus .vol-box .vol-active {
+          position: absolute;
+          left: 19px;
+          bottom: 0px;
+          width: 2px;
+          height: 80px;
+          background: white; }
+          .tool .volume .volus .vol-box .vol-active .vol-radio-box {
+            cursor: pointer;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: -9px;
+            top: -9px; }
+            .tool .volume .volus .vol-box .vol-active .vol-radio-box .vol {
+              display: inline-block;
+              position: absolute;
+              left: 6px;
+              top: 6px;
+              width: 8px;
+              height: 8px;
+              border-radius: 50%;
+              background: white; }
+    .tool .volume .volus::before {
+      position: absolute;
+      content: "";
+      border-right: 10px solid transparent;
+      border-left: 10px solid transparent;
+      border-top: 10px solid rgba(255, 105, 180, 0.548);
+      margin-left: 10px;
+      margin-top: 100px; }
+    .tool .volume svg {
+      position: absolute;
+      bottom: 0;
+      left: 7px; }
+
+.box-hover-show {
+  box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.493); }
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+  font-size: 30px; }
+
